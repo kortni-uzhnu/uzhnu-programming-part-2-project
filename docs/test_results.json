@@ -1,0 +1,215 @@
+{
+  "date": "2026-11-21",
+  "cli_cases_passed": 36,
+  "results": [
+    {
+      "name": "First launch and empty displays",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Add groups and students",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Restart restores records",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Rename group and change year",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Edit every student field and move group",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Blank edit fields keep current values",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Non-numeric menu",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Menu with trailing characters",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Out-of-range menu",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Non-integer menu",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Duplicate group",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid group year",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid group code",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Missing group",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Missing student ID",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid group rename",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid student score",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Student move to missing group",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Cancelled student deletion",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Cancelled group deletion",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "EOF at menu",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "EOF during student entry",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "EOF during student edit",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "EOF at delete confirmation",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmed student deletion",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Confirmed group deletion removes its students",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Deletions survive restart",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Zero score boundary",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Hundred score boundary",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Help argument",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Extra arguments rejected",
+      "exit_code": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "Provided sample data loads",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Malformed file refuses startup",
+      "exit_code": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "Directory refuses startup",
+      "exit_code": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "Save failure recovers to menu",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "Recovery file prevents unsafe startup",
+      "exit_code": 1,
+      "status": "PASS"
+    }
+  ],
+  "console_sessions": {
+    "Add groups and students": {
+      "input": "1\nCE-101\n2026\n1\nCE-102\n2026\n2\nCE-101\nAlex Morgan\n2008-02-29\n87.5\n+380 50 123 4567\n2\nCE-101\nSam Taylor\n2007-11-15\n92\n+380 67 234 5678\n3\n4\nCE-101\n0\n",
+      "stdout": "Studbook - School Students Database\nLoaded 0 group(s) and 0 student(s).\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Group code: Group year (1900-2100): Group added and saved.\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Group code: Group year (1900-2100): Group added and saved.\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Group code: Full name: Birth date (YYYY-MM-DD): Average score (0-100): Phone: Student added and saved. ID: 1\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Group code: Full name: Birth date (YYYY-MM-DD): Average score (0-100): Phone: Student added and saved. ID: 2\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: \nGroups: 2 | Students: 2\nGroup: CE-101 | Year: 2026 | Students: 2\nGroup: CE-102 | Year: 2026 | Students: 0\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Group code: \nGroup: CE-101 | Students: 2\nID: 1 | Name: Alex Morgan\nBirth date: 2008-02-29 | Average score: 87.50\nPhone: +380 50 123 4567\nID: 2 | Name: Sam Taylor\nBirth date: 2007-11-15 | Average score: 92.00\nPhone: +380 67 234 5678\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Goodbye. All completed changes are saved.\n",
+      "stderr": ""
+    },
+    "Restart restores records": {
+      "input": "4\nCE-101\n0\n",
+      "stdout": "Studbook - School Students Database\nLoaded 2 group(s) and 2 student(s).\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Group code: \nGroup: CE-101 | Students: 2\nID: 1 | Name: Alex Morgan\nBirth date: 2008-02-29 | Average score: 87.50\nPhone: +380 50 123 4567\nID: 2 | Name: Sam Taylor\nBirth date: 2007-11-15 | Average score: 92.00\nPhone: +380 67 234 5678\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Goodbye. All completed changes are saved.\n",
+      "stderr": ""
+    },
+    "Edit every student field and move group": {
+      "input": "6\nCE-201\n1\nCE-102\nAlex Morgan-Reed\n2008-03-01\n95.25\n+380 50 111 2233\n4\nCE-102\n3\n0\n",
+      "stdout": "Studbook - School Students Database\nLoaded 2 group(s) and 2 student(s).\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Group code: \nGroup: CE-201 | Students: 2\nID: 1 | Name: Alex Morgan\nBirth date: 2008-02-29 | Average score: 87.50\nPhone: +380 50 123 4567\nID: 2 | Name: Sam Taylor\nBirth date: 2007-11-15 | Average score: 92.00\nPhone: +380 67 234 5678\nStudent ID: Leave a field blank to keep its current value.\nNew group code [CE-201]: Full name [Alex Morgan]: Birth date [2008-02-29]: Average score [87.5]: Phone [+380 50 123 4567]: Student updated and saved. ID: 1\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Group code: \nGroup: CE-102 | Students: 1\nID: 1 | Name: Alex Morgan-Reed\nBirth date: 2008-03-01 | Average score: 95.25\nPhone: +380 50 111 2233\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: \nGroups: 2 | Students: 2\nGroup: CE-201 | Year: 2027 | Students: 1\nGroup: CE-102 | Year: 2026 | Students: 1\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Goodbye. All completed changes are saved.\n",
+      "stderr": ""
+    },
+    "Invalid student score": {
+      "input": "6\nCE-102\n1\n\n\n\n101\n\n0\n",
+      "stdout": "Studbook - School Students Database\nLoaded 2 group(s) and 2 student(s).\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Group code: \nGroup: CE-102 | Students: 1\nID: 1 | Name: Alex Morgan-Reed\nBirth date: 2008-03-01 | Average score: 95.25\nPhone: +380 50 111 2233\nStudent ID: Leave a field blank to keep its current value.\nNew group code [CE-102]: Full name [Alex Morgan-Reed]: Birth date [2008-03-01]: Average score [95.25]: Phone [+380 50 111 2233]: Error: Average score must be a finite number from 0 to 100.\nNo change was saved.\n\n1. Add group\n2. Add student\n3. Show groups\n4. Show students\n5. Edit group\n6. Edit student / move group\n7. Delete group\n8. Delete student\n0. Exit\nChoice: Goodbye. All completed changes are saved.\n",
+      "stderr": ""
+    }
+  },
+  "source_sha256": {
+    "src/console.cpp": "dc8dedb3757effa2b5dce67855bec32032314e6005e8c26bd9e393c1a577f52f",
+    "src/console.hpp": "9f2c1325f05db70ac880241b959bfbf24ad1e4a6227736745c10db14d619b54e",
+    "src/database.cpp": "02d0bcaea3148126186ae55dc316234985e41a00b58ccb36570c995c9428ced7",
+    "src/database.hpp": "3918c4aadf3a361a7696c1f7518ef41ded07e9f0c52b4d40d18b752ed745af03",
+    "src/main.cpp": "14d91ecbd288a6369b552e26c29da6cfc69796d150ab874c41c02a55ecd316ff"
+  }
+}

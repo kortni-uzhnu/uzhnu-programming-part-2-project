@@ -1,0 +1,56 @@
+Studbook verification
+21 November 2026
+
+Compiler: Zig 0.17.1 C++ driver.
+Language and options: -std=c++17 -Wall -Wextra -Wpedantic -Werror -O2
+Targets: native Windows x86-64 and Linux x86-64.
+
+The application and the direct C++ test executable compiled successfully for
+both targets without warnings. The Windows binaries were executed directly.
+The Linux binaries were executed locally in the docker-desktop WSL distribution.
+
+                         Windows        Linux
+Application build        PASS           PASS
+Test executable build    PASS           PASS
+Direct database checks   132 passed     132 passed
+Console execution cases  36 passed      36 passed
+
+The direct C++ suite tests field validation, date/leap-year boundaries, score
+boundaries, group and student operations, duplicate names and stable IDs,
+all edited fields, group transfers, renaming groups, cascading deletions,
+escaped text and exact numeric round trips, ID continuity after restarting,
+failed saves, recovery-file protection, CRLF files, and malformed files.
+
+The end-to-end suite tests the compiled program through its public console:
+creating and displaying records, editing every field, group transfers and
+renames, empty edit defaults, invalid menu responses and record selections,
+invalid edits, cancelled and confirmed deletions, interrupted input, restart
+persistence, score boundaries, sample data, startup failures and save failures.
+Rejected changes, cancelled deletions and interrupted operations are checked
+against the bytes of the previously saved file.
+
+Machine-readable console results and captured sessions are in test_results.json
+(Windows) and test_results_linux.json (Linux). Both files include SHA-256 hashes
+of the five application source/header files tested.
+
+Test sources:
+  tests/database_tests.cpp
+  tests/cli_tests.py
+
+Application source sets used for compilation:
+  src/main.cpp src/database.cpp src/console.cpp
+
+Direct test source set:
+  tests/database_tests.cpp src/database.cpp src/console.cpp -Isrc
+
+CMake and Microsoft cl commands in README.md are optional build instructions.
+They were not the tools used for this recorded verification.
+
+Known limits:
+  One process per data file; no concurrent-writer or sudden-power-loss tests.
+  No account system, encryption, graphical interface or database server.
+  A failed restoration or interruption may need manual .bak/.tmp recovery.
+  Future birth dates are checked against the computer's local date.
+
+The project and explanatory note were prepared locally. No upload or Moodle
+submission is included in this verification record.
