@@ -1,0 +1,11 @@
+/build/
+/studbook
+/studbook_tests
+/*.exe
+/*.obj
+/*.pdb
+/students_data.txt
+/students_data.txt.tmp
+/students_data.txt.bak
+__pycache__/
+*.pyc
